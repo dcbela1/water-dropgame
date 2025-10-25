@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background-color: #f7c948;
+  color: #333;
+  padding: 20px;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+#game-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1.2em;
+  margin: 15px 0;
+}
+
+#game-container {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  height: 500px;
+  background-color: #e0f7ff;
+  border: 3px solid #f7c948;
+  border-radius: 12px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#bucket {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 60px;
+  background-color: #ffcc33;
+  border: 3px solid #b68600;
+  border-radius: 0 0 20px 20px;
+}
+
+button {
+  background-color: #f7c948;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  border-radius: 8px;
+  margin: 15px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffd84d;
+}
+
+.hidden {
+  display: none;
+}
+
+.water-drop {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: fall 3s linear forwards;
+}
+
+.clean {
+  background-color: #00aaff;
+}
+
+.bad {
+  background-color: #6b4f4f;
+}
+
+#message {
+  font-size: 1.4em;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+@keyframes fall {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  #game-container {
+    width: 95%;
+    height: 400px;
+  }
+
+  #bucket {
+    width: 60px;
+    height: 45px;
+  }
+}
